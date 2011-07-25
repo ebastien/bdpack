@@ -21,8 +21,9 @@ We know of two Git-workflow helpers: "git-buildpackage" for Debian and "fedpkg" 
 
 ## Rough scenario
 
-    $ bdpack new mypackage /path/to/upstream-0.1.0.tar.gz
+    $ bdpack new mypackage --dist debian
     $ cd mypackage
+    $ bdpack import /path/to/upstream-0.1.0.tar.gz   # Import the upstream revision
     $ bdpack spec                                    # Run the specs
     ...
     $ bdpack build                                   # Build a binary package
